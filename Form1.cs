@@ -22,9 +22,17 @@ namespace EchoMessenger
                 return;
             }
 
-            lstEchoWindow.Items.Add(typed_msg); // 입력된 메시지를 리스트박스에 추가
+            // 앞뒤 공백을 제거한 typed_msg를 사용하여 리스트에 추가
+            lstEchoWindow.Items.Add($"{DateTime.Now:[HH:mm:ss]} {typed_msg}"); // 입력된 메시지 앞에 현재시간을 붙여 리스트박스에 추가
             txtMessenger.Clear();
             txtMessenger.Focus();
+            UpdateMessageCount();
+        }
+
+        private void UpdateMessageCount()
+        {
+            // lblCount는 Designer에서 선언됨
+            lblCount.Text = $"총 메시지: {lstEchoWindow.Items.Count}";
         }
 
         // 엔터 키로 메시지 전송

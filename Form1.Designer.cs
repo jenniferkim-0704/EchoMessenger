@@ -45,6 +45,17 @@
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Echo Messenger";
             // 
+            // lblCount
+            // 
+            lblCount = new Label();
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("맑은 고딕", 10F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lblCount.Location = new Point(560, 20);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(100, 23);
+            lblCount.TabIndex = 4;
+            lblCount.Text = "총 메시지: 0";
+            // 
             // txtMessenger
             // 
             txtMessenger.Font = new Font("맑은 고딕", 15F, FontStyle.Regular, GraphicsUnit.Point, 129);
@@ -90,6 +101,7 @@
             Controls.Add(lstEchoWindow);
             Controls.Add(txtMessenger);
             Controls.Add(lblTitle);
+            Controls.Add(lblCount);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -99,6 +111,7 @@
         #endregion
 
         private Label lblTitle;
+        private Label lblCount;
         private TextBox txtMessenger;
         private ListBox lstEchoWindow;
         private Button btnSend;

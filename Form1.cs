@@ -7,17 +7,34 @@ namespace EchoMessenger
             InitializeComponent();
         }
 
-        private void btnSend_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            string typed_msg = txtMessenger.Text; // txtMessenger 텍스트박스에 입력된 문자열을 가져와서 typed_msg 변수에 저장
-            lstEchoWindow.Items.Add(typed_msg); // lstEchoWindow 리스트박스에 typed_msg 변수를 추가하여 메시지를 표시
-            txtMessenger.Clear(); // txtMessenger 텍스트박스의 내용을 지워서 다음 메시지를 입력할 수 있도록 준비
-            txtMessenger.Focus(); // txtMessenger 텍스트박스에 포커스를 설정하여 사용자가 바로 다음 메시지를 입력할 수 있도록 함
+            SendMessage();
+        }
+
+        private void SendMessage()
+        {
+            string typed_msg = txtMessenger.Text.Trim(); // 공백만 있는 경우 전송하지 않음
+            if (string.IsNullOrEmpty(typed_msg))
+            {
+                txtMessenger.Focus();
+                return;
+            }
+
+            lstEchoWindow.Items.Add(typed_msg); // 입력된 메시지를 리스트박스에 추가
+            txtMessenger.Clear();
+            txtMessenger.Focus();
+        }
+
+        // 엔터 키로 메시지 전송
+        private void txtMessenger_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SendMessage();
+            }
         }
     }
 }

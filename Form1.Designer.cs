@@ -54,6 +54,7 @@
             txtMessenger.Size = new Size(542, 44);
             txtMessenger.TabIndex = 1;
             txtMessenger.Text = "(여기에 입력하세요)";
+            txtMessenger.KeyDown += txtMessenger_KeyDown;
             // 
             // lstEchoWindow
             // 
@@ -77,7 +78,6 @@
             btnSend.Text = "전송";
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
-            btnSend.KeyDown += btnSend_KeyDown;
             // 
             // Form1
             // 

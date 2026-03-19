@@ -49,8 +49,9 @@
             // 
             txtMessenger.Font = new Font("맑은 고딕", 15F, FontStyle.Regular, GraphicsUnit.Point, 129);
             txtMessenger.Location = new Point(12, 370);
+            txtMessenger.Multiline = true;
             txtMessenger.Name = "txtMessenger";
-            txtMessenger.Size = new Size(542, 41);
+            txtMessenger.Size = new Size(542, 44);
             txtMessenger.TabIndex = 1;
             txtMessenger.Text = "(여기에 입력하세요)";
             // 
@@ -76,9 +77,11 @@
             btnSend.Text = "전송";
             btnSend.UseVisualStyleBackColor = false;
             btnSend.Click += btnSend_Click;
+            btnSend.KeyDown += btnSend_KeyDown;
             // 
             // Form1
             // 
+            AcceptButton = btnSend;
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;

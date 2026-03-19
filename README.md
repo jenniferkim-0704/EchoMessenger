@@ -10,9 +10,9 @@
   -Visual Studio를 이용하여 UI 디자인
   
   ## 실행 화면(과제1)
-   <img width="802" height="489" alt="스크린샷 2026-03-19 123851" src="https://github.com/user-attachments/assets/9e8553ad-e942-4366-adc8-f99f5bb01037" />
+<img width="802" height="489" alt="test1" src="https://github.com/user-attachments/assets/fef740f4-6dd8-45ec-985c-8450b1158642" />
 
-  
+
   -과제내용
    -Label(표시), TextBox(입력), Button(전송), ListBox(대화창)를 적절히 배치
    -전송 버튼 클릭 시 TextBox의 텍스트를 ListBox의 Items로 추가
@@ -24,8 +24,32 @@
    -추가 내용이 많아지면 리스트 박스에 스크롤바가 자동으로 생기고 스크롤됨
 
  ## 실행화면(과제2)
+![test2](https://github.com/user-attachments/assets/fe02d84d-ca12-468b-8b1b-257c2e6caa1c)
+
+ -과제내용
+  -사용자 ui 개선
+
+ -구현 내용과 기능 설명
+  - 입력창의 기존 텍스트를 지우고, 포커스를 입력창으로 이동하여 사용자가 바로 다음 메시지를 입력할 수 있도록 개선
+  - 엔터키로 메시지 전송 기능 추가하여 사용자의 편의성 향상
+  - 공백 메시지 입력 방지 기능 추가하여 불필요한 메시지 전송 방지
+
+ ## 실행화면(과제3)
+<img width="802" height="489" alt="test3" src="https://github.com/user-attachments/assets/9268359b-daa5-45c1-9156-1f8d25596c4e" />
+
+
+ -과제내용
+  -데이터 가공 및 상태 표시 기능 추가
+
+ -구현 내용과 기능 설명
+  -타임스탬프 기능 추가
+  -메시지 수 카운트 기능 추가
+  -불필요한 공백을 제거하는 기능 추가
+=======
 
  
  -과제내용
  ## 실행화면(과제3)
  <img width="802" height="489" alt="스크린샷 2026-03-19 131709" src="https://github.com/user-attachments/assets/897493af-1167-46c5-b418-9836378c20f4" />
+>>>>>>> 86c47dfea31f1e84e6b7ee20645f67f1d0d887cd
+
